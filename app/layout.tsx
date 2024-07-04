@@ -15,18 +15,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  let header = (<header>
-    <Link href={"/"} className='text-3xl font-bold flex justify-center p-4'>Resume Generator</Link>
-  </header>)
 
   let footer = (<footer>
-    <p className='flex justify-center p-4'>Made with 💛</p>
+    <p className='flex justify-center text-sm font-medium text-gray-900 dark:text-white p-4' >Made with 💛</p>
   </footer>)
 
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {header}
+      <body className={`${inter.className} dark:bg-800`}>
         {children}
         {footer}
       </body>
